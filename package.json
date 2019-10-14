@@ -1,0 +1,32 @@
+{
+	"name": "authentication",
+	"version": "1.0.0",
+	"description": "Authentication ",
+	"main": "app.js",
+	"scripts": {
+		"client": "npm start --prefix client",
+		"server": "node app",
+		"dev": "concurrently \"node run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client  && npm run build --prefix client"
+	},
+	"author": "md sajal",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^3.0.6",
+		"cors": "^2.8.5",
+		"dotenv": "^8.1.0",
+		"express": "^4.17.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.7.1",
+		"morgan": "^1.9.1",
+		"nodemailer": "^6.3.0",
+		"validator": "^11.1.0"
+	},
+	"devDependencies": {
+		"concurrently": "^4.1.2",
+		"nodemon": "^1.19.2"
+	},
+	"engines": {
+		"node": "10.15.0"
+	}
+}
