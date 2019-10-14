@@ -4,7 +4,7 @@
 	"description": "Authentication ",
 	"main": "app.js",
 	"scripts": {
-		"start": "node server",
+		"start": "node app",
 		"client": "npm start --prefix client",
 		"server": "node app",
 		"dev": "concurrently \"node run server\" \"npm run client\"",
