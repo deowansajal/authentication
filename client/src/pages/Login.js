@@ -24,6 +24,7 @@ const Login = ({
 
 	//Custom useEffect  Hook to  Clear Message
 	useEffectClearMessage(messages, setMessages);
+	console.log(loginError);
 
 	//Custom useState  Hook to  Set Error
 	const error = useStateError(loginError);
@@ -80,7 +81,7 @@ const Login = ({
 
 const mapStateToProps = ({ auth }) => ({
 	messages: auth.messages,
-	loginError: auth.loginError
+	loginError: auth.errors.loginError
 });
 
 export default connect(

@@ -4,8 +4,8 @@ import _ from "lodash";
 const useStateError = err => {
 	const [error, setError] = useState({});
 
-	if (err && !_.isEqual(error, error)) {
-		setError(error);
+	if (err && !_.isEqual(err, error)) {
+		setError(err);
 	}
 
 	return error;
