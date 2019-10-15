@@ -15,7 +15,6 @@ const init = {
 };
 
 const authReducer = (state = init, { type, payload }) => {
-	// console.log(`inside of payload ${JSON.stringify(payload)}`);
 	switch (type) {
 		case SET_USER:
 			return {

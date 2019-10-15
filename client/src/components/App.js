@@ -11,6 +11,7 @@ import Logout from "./Logout";
 import PublicRoute from "./PublicRoute";
 import PrivateRoute from "./PrivateRoute";
 // import ServerError from "./ServerError";
+console.log(process.env.NODE_ENV);
 
 const App = () => {
 	return (

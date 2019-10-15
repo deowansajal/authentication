@@ -24,9 +24,9 @@ const Register = ({ register, registerError, history }) => {
 	};
 
 	return (
-		<form onSubmit={submitHandler} className="mt-5 pt-5">
-			<div className="row mt-5 ">
-				<div className="col-md-6 mx-auto">
+		<form onSubmit={submitHandler} className="d-flex form">
+			<div className="row flex-grow-1">
+				<div className="col-md-6 m-auto ">
 					<h1 className="display-4 text-center mb-3">REGISTER </h1>
 					<InputField
 						type="text"

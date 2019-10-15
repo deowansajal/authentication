@@ -10,7 +10,10 @@ import rootReducer from "./store/reducers/rootReducer";
 import jwtDecode from "jwt-decode";
 import { SET_USER } from "./store/actions/actionTypes";
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers =
+	(process.env.NODE_ENV !== "production" &&
+		window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
+	compose;
 
 const middleware = [thunk];
 

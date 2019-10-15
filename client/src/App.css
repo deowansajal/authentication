@@ -3,3 +3,7 @@
 	color: white;
 	opacity: 0.5;
 }
+
+.form {
+	height: calc(100vh - 60px);
+}

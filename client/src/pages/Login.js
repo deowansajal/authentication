@@ -24,7 +24,6 @@ const Login = ({
 
 	//Custom useEffect  Hook to  Clear Message
 	useEffectClearMessage(messages, setMessages);
-	console.log(loginError);
 
 	//Custom useState  Hook to  Set Error
 	const error = useStateError(loginError);
@@ -37,14 +36,13 @@ const Login = ({
 	};
 
 	const submitHandler = e => {
-		console.log(history);
 		e.preventDefault();
 		login(user, history);
 	};
 
 	return (
-		<form onSubmit={submitHandler} className="mt-5 pt-5">
-			<div className="row mt-5">
+		<form onSubmit={submitHandler} className="d-flex form">
+			<div className="row flex-grow-1">
 				<div className="col-md-6 m-auto">
 					<Message msg={msg.registerSuccess} />
 

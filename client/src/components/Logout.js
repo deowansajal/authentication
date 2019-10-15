@@ -8,7 +8,6 @@ const Logout = ({ location, logout }) => {
 	useEffect(() => {
 		localStorage.removeItem("auth_token");
 		logout();
-		console.log("I am inside of logout...");
 	}, [logout]);
 
 	return <Redirect to={{ pathname: "/login", state: { state: location } }} />;
