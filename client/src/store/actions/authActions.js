@@ -41,7 +41,7 @@ const register = (user, history) => dispatch => {
 const login = (user, history) => dispatch => {
 	Axios.post("/api/users/login", user)
 		.then(data => {
-			console.log(data);
+			
 			const { message, token } = data.data;
 			localStorage.setItem("auth_token", token);
 			const decode = jwtDecode(token);
@@ -49,7 +49,7 @@ const login = (user, history) => dispatch => {
 			history.push("/");
 		})
 		.catch(err => {
-			console.log(err);
+			
 			const { data, status } = err.response;
 			setError(dispatch, { loginError: data.error }, status);
 		});
