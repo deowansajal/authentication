@@ -15,7 +15,7 @@ const login = async (req, res) => {
 	try {
 		const findUser = await User.findOne({ email });
 		if (!findUser) return resourceError(res, "User doesn't Exist", 404);
-		const match = bcrypt.compare(password, findUser.password);
+		const match = await bcrypt.compare(password, findUser.password);
 		if (!match) return resourceError(res, "Email Or Password is Incorrect");
 
 		const token = generateJWT({
